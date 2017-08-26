@@ -9,8 +9,10 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity {
+import ll.vettelopensource.view.TextLimitEditText;
 
+public class MainActivity extends AppCompatActivity {
+    TextLimitEditText mTLet;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,14 +20,17 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
+
+        mTLet = (TextLimitEditText) findViewById(R.id.tvLimit);
+        mTLet.setLimitCount(12);
+        mTLet.setILimit(new TextLimitEditText.ILimit() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
+            public void onTextLimitNotify(final int count) {
+                        Snackbar.make(mTLet, "不能超过"+count+"个字符", Snackbar.LENGTH_LONG)
+                                .setAction("Action", null).show();
+                    }
         });
+
     }
 
     @Override
