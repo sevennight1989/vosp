@@ -1,4 +1,4 @@
-package ll.vettelopensource.view;
+package ll.opensource.view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -10,6 +10,8 @@ import android.widget.EditText;
 /**
  * Created by ZhangPeng on 8-26-0026.
  */
+
+//可以限制长度的EditText，与原生限制区别是，一旦复制超过限制长度的字符，会提示超过限制，不会截断，原生的会截断
 
 @SuppressLint("AppCompatCustomView")
 public class TextLimitEditText extends EditText {

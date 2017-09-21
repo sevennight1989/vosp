@@ -1,5 +1,4 @@
-package ll.vettelopensource.view;
-
+package ll.opensource.view;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -13,8 +12,9 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 
-import ll.vettelopensource.R;
+import ll.opensource.R;
 
+//颜色渐变ProgressBar,中间的图标可以自定义，用于加载自定义进度条
 public class GradientRing
         extends View {
     private int animation_progress = 1;
@@ -41,7 +41,7 @@ public class GradientRing
         mContext = paramContext;
     }
 
-    private Bitmap getBitamp() {
+    private Bitmap getBitmap() {
         Bitmap localBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.a);
         int i = localBitmap.getWidth();
         int j = localBitmap.getHeight();
@@ -83,6 +83,6 @@ public class GradientRing
         super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
         mWidth = getWidth();
         mHeight = getHeight();
-        mBp = getBitamp();
+        mBp = getBitmap();
     }
 }
