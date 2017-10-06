@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="left_border" format="boolean" />
+    <attr name="top_border" format="boolean" />
+    <attr name="right_border" format="boolean" />
+    <attr name="bottom_border" format="boolean" />
+    <declare-styleable name="view_border">
+        <attr name="left_border" />
+        <attr name="top_border" />
+        <attr name="right_border" />
+        <attr name="bottom_border" />
+    </declare-styleable>
+
+</resources>
