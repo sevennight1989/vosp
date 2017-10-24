@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.startDownload:
-                dMUtil.startDownload();
+//                dMUtil.startDownload();
                 break;
         }
     }

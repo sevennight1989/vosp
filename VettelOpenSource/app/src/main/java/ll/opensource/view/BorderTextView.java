@@ -57,7 +57,8 @@ public class BorderTextView extends TextView {
         a.recycle();
     }
 
-    private int sroke_width = 1;
+    //边框宽度
+    private int stroke_width = 1;
 
     @Override
     protected void onDraw(Canvas canvas) {
@@ -67,19 +68,19 @@ public class BorderTextView extends TextView {
         //  画TextView的4个边
         //上边
         if (topBorder) {
-            canvas.drawLine(0, 0, this.getWidth() - sroke_width, 0, paint);
+            canvas.drawLine(0, 0, this.getWidth() - stroke_width, 0, paint);
         }
         //左边
         if (leftBorder) {
-            canvas.drawLine(0, 0, 0, this.getHeight() - sroke_width, paint);
+            canvas.drawLine(0, 0, 0, this.getHeight() - stroke_width, paint);
         }
         //右边
         if (rightBorder) {
-            canvas.drawLine(this.getWidth() - sroke_width, 0, this.getWidth() - sroke_width, this.getHeight() - sroke_width, paint);
+            canvas.drawLine(this.getWidth() - stroke_width, 0, this.getWidth() - stroke_width, this.getHeight() - stroke_width, paint);
         }
         //下边
         if (bottomBorder) {
-            canvas.drawLine(0, this.getHeight() - sroke_width, this.getWidth() - sroke_width, this.getHeight() - sroke_width, paint);
+            canvas.drawLine(0, this.getHeight() - stroke_width, this.getWidth() - stroke_width, this.getHeight() - stroke_width, paint);
         }
         super.onDraw(canvas);
     }
