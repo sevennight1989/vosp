@@ -1,1 +1,10 @@
 /VettelOpenSource/local.properties
+/VettelOpenSource/gradlew
+/VettelOpenSource/gradlew.bat
+/VettelOpenSource/VettelOpenSource.iml
+/VettelOpenSource/.gradle
+/VettelOpenSource/.idea
+/VettelOpenSource/build
+/VettelOpenSource/gradle
+/VettelOpenSource/app/app.iml
+/VettelOpenSource/app/build
